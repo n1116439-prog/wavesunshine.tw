@@ -1,0 +1,7 @@
+{
+  "name": "舞動陽光專案",
+  "description": "A sports pickup game platform where users can find, join, and organize sports activities like basketball, badminton, and more.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
