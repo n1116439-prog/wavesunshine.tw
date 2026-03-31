@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { MOCK_ACTIVITIES } from '../constants';
-import { askCaptainSmart } from '../services/geminiService';
 import { Message } from '../types';
 
 const ChatPage: React.FC = () => {
@@ -37,8 +36,7 @@ const ChatPage: React.FC = () => {
     setInput('');
     setIsTyping(true);
 
-    const context = `${activity?.title} at ${activity?.venue} on ${activity?.date} ${activity?.time}. Level: ${activity?.level}. Price: ${activity?.price}. Highlights: ${activity?.highlights.join(', ')}.`;
-    const aiResponse = await askCaptainSmart(input, context);
+    const aiResponse = '收到你的訊息了！有任何問題歡迎繼續問我 😊';
 
     setIsTyping(false);
     const captainMsg: Message = {
